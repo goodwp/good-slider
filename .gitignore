@@ -11,3 +11,5 @@ node_modules/
 !/wp/.gitkeep
 node_modules
 .vscode
+
+/good-slider.zip

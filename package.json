@@ -24,5 +24,14 @@
     "dependencies": {
         "@wordpress/i18n": "^4.20.0",
         "swiper": "^8.4.4"
-    }
+    },
+    "files": [
+        "CHANGELOG.md",
+        "good-slider.php",
+        "README.md",
+        "readme.txt",
+        "build",
+        "languages",
+        "src"
+    ]
 }
