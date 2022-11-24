@@ -1,0 +1,35 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 2,
+    "name": "good-slider/item",
+    "version": "0.1.0",
+    "title": "Slider Item",
+    "category": "layout",
+    "icon": "slides",
+    "description": "A carousel slider",
+    "supports": {
+        "html": false,
+        "inserter": true,
+        "alignWide": false,
+        "align": false,
+        "ariaLabel": true,
+        "color": {
+            "background": true,
+            "text": true,
+            "gradients": true,
+            "link": true,
+            "enableContrastChecker": true
+        },
+        "spacing": {
+            "padding": true,
+            "blockGap": true,
+            "__experimentalDefaultControls": {
+                "padding": true,
+                "blockGap": true
+            }
+        }
+    },
+    "parent": ["goodwp/good-slider"],
+    "textdomain": "good-slider",
+    "editorScript": "file:./index.js"
+}

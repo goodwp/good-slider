@@ -1,0 +1,7 @@
+{
+    "phpVersion": "7.4",
+    "core": "WordPress/WordPress#6.1",
+    "mappings": {
+        "wp-content/plugins/good-slider": "./"
+    }
+}

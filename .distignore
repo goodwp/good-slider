@@ -1,0 +1,17 @@
+/.vscode
+/.git
+/.github
+/.wordpress-org
+/wp
+.distignore
+.editorconfig
+.eslintignore
+.gitattributes
+.gitignore
+.npmrc
+.nvmrc
+.wp-env.json
+/node_modules
+package.json
+package-lock.json
+README.md
