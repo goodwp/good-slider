@@ -6,11 +6,12 @@
  * Requires at least: 6.0
  * Requires PHP:      7.4
  * Version:           0.1.0
- * Author:            Fabian Todt
- * Author URI:        https://fabiantodt.at/en/
+ * Author:            GoodWP
+ * Author URI:        https://goodwp.io
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:       good-slider
+ * Domain Path:       /languages
  *
  * @package           GoodWP\GoodSlider
  */
