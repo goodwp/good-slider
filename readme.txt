@@ -1,5 +1,5 @@
 === Good Slider ===
-Contributors:      goodwp, gaambo
+Contributors:      goodwpio, gaambo
 Tags:              block, slider, swiper
 Requires at least: 6.0
 Tested up to:      6.1
