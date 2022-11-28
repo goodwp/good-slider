@@ -3,7 +3,7 @@ Contributors:      goodwpio, gaambo
 Tags:              block, slider, swiper
 Requires at least: 6.0
 Tested up to:      6.1
-Stable tag:        0.1.0
+Stable tag:        1.0.0
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -62,7 +62,5 @@ Yes, we are working on exposing the most common configuration options (slides sh
 
 == Changelog ==
 
-= 1.0.0 =
+= 1.0.0 (2022-11-28) =
 * The first public release of the plugin 🥳
-
-For more see [CHANGELOG.md](https://github.com/goodwp/good-slider/blob/main/CHANGELOG.md).
