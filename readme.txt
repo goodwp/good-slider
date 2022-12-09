@@ -3,7 +3,7 @@ Contributors:      goodwpio, gaambo
 Tags:              block, slider, swiper
 Requires at least: 6.0
 Tested up to:      6.1
-Stable tag:        1.0.0
+Stable tag:        1.1.0
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -61,6 +61,9 @@ You can use the `good-slider/swiper-script-handle` filter and set it to `good-sl
 Yes, we are working on exposing the most common configuration options (slides shown, spacing, colors,...) via the block's settings.
 
 == Changelog ==
+
+= 1.1.0 (2022-12-09) =
+* Added JavaScript filters to filter `InnerBlocks` settings/props for slider and item block.
 
 = 1.0.0 (2022-11-28) =
 * The first public release of the plugin 🥳
