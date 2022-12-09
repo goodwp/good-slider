@@ -10,6 +10,7 @@ import {
 import { createBlock } from "@wordpress/blocks";
 import { Button, Placeholder, SelectControl } from "@wordpress/components";
 import { useDispatch } from "@wordpress/data";
+import { applyFilters } from "@wordpress/hooks";
 
 import "./editor.scss";
 
@@ -33,7 +34,8 @@ const htmlElementMessages = {
     ),
 };
 
-export default function Edit({ clientId, attributes, setAttributes }) {
+export default function Edit(props) {
+    const { clientId, attributes, setAttributes } = props;
     const { replaceInnerBlocks } = useDispatch(blockEditorStore);
 
     const addSlide = () => {
@@ -54,13 +56,18 @@ export default function Edit({ clientId, attributes, setAttributes }) {
     const { tagName: TagName = "div" } = attributes;
 
     const blockProps = useBlockProps();
-    const innerBlocksProps = useInnerBlocksProps(blockProps, {
-        allowedBlocks: ["good-slider/item"],
-        placeholder: SliderPlaceHolder,
-        templateLock: false,
-        renderAppender: InnerBlocks.ButtonBlockAppender,
-        __experimentalCaptureToolbars: true,
-    });
+    const innerBlocksSettings = applyFilters(
+        "good-slider.slider.innerBlocks-settings",
+        {
+            allowedBlocks: ["good-slider/item"],
+            placeholder: SliderPlaceHolder,
+            templateLock: false,
+            renderAppender: InnerBlocks.ButtonBlockAppender,
+            __experimentalCaptureToolbars: true,
+        },
+        props
+    );
+    const innerBlocksProps = useInnerBlocksProps(blockProps, innerBlocksSettings);
 
     return (
         <>
