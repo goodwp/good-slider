@@ -31,7 +31,9 @@ function registerBlock()
         'render_callback' => __NAMESPACE__ . '\renderSliderBlock'
     ]);
 
-    register_block_type(__DIR__ . '/build/item-block');
+    register_block_type(__DIR__ . '/build/item-block', [
+        'render_callback' => __NAMESPACE__ . '\renderItemBlock'
+    ]);
 }
 add_action('init', __NAMESPACE__ . '\registerBlock');
 
@@ -170,5 +172,21 @@ function renderSliderBlock($attributes, $content)
         1
     );
 
+    return $content;
+}
+
+/**
+ * Render the block
+ *
+ * @param array $attributes
+ * @param string $content
+ * @return string
+ */
+function renderItemBlock($attributes, $content)
+{
+    // prevent empty slides from rendering
+    if (trim($content) === '<div class="wp-block-good-slider-item"></div>') {
+        return '';
+    }
     return $content;
 }
