@@ -72,7 +72,7 @@ export default function Edit(props) {
     // TODO: before WordPress 6.4 remove __experimentalGroup; keep it now for backwards compatibility
     return (
         <>
-            <InspectorControls __experimentalGroup="advanced">
+            <InspectorControls __experimentalGroup="advanced" group="advanced">
                 <SelectControl
                     label={__("HTML element")}
                     options={[
