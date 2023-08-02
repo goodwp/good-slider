@@ -12,17 +12,17 @@
         "start": "wp-scripts start",
         "dev:start": "wp-env start",
         "dev:stop": "wp-env stop",
-        "dev:i18n": " wp-env run cli 'wp i18n make-pot wp-content/plugins/good-slider wp-content/plugins/good-slider/languages/good-slider.pot --exclude=\"build\" --domain=good-slider'"
+        "dev:i18n": "wp-env run cli 'wp i18n make-pot wp-content/plugins/good-slider wp-content/plugins/good-slider/languages/good-slider.pot --exclude=\"build\" --domain=good-slider'"
     },
     "devDependencies": {
-        "@wordpress/components": "^21.3.0",
-        "@wordpress/edit-post": "^6.17.0",
-        "@wordpress/editor": "^12.19.0",
-        "@wordpress/plugins": "^4.18.0",
         "@wordpress/scripts": "^24.5.0"
     },
     "dependencies": {
+        "@wordpress/components": "^21.3.0",
+        "@wordpress/edit-post": "^6.17.0",
+        "@wordpress/editor": "^12.19.0",
         "@wordpress/i18n": "^4.20.0",
+        "@wordpress/plugins": "^4.18.0",
         "swiper": "^8.4.4"
     },
     "files": [

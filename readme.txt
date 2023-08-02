@@ -3,7 +3,7 @@ Contributors:      goodwpio, gaambo
 Tags:              block, slider, swiper
 Requires at least: 6.0
 Tested up to:      6.3
-Stable tag:        1.2.0
+Stable tag:        1.3.0
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -61,6 +61,10 @@ You can use the `good-slider/swiper-script-handle` filter and set it to `good-sl
 Yes, we are working on exposing the most common configuration options (slides shown, spacing, colors,...) via the block's settings.
 
 == Changelog ==
+
+= 1.3.0 (2023-08-02) =
+- Tweak/Fix: Disable left & right padding for slide-item block, because they break the slider layout
+- Compatibility: Tested up to WordPress 6.3
 
 = 1.2.0 (2023-03-08) =
 * Add a server side render callback to the item block
