@@ -21,7 +21,7 @@
             "enableContrastChecker": true
         },
         "spacing": {
-            "padding": true,
+            "padding": ["top", "bottom"],
             "blockGap": true,
             "__experimentalDefaultControls": {
                 "padding": true,
