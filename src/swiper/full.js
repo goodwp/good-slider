@@ -1,5 +1,7 @@
 /**
  * Complete Swiper bundle with all modules
  */
-import "swiper/bundle";
+import Swiper from "swiper/bundle";
 import "./full.scss";
+
+window.Swiper = Swiper;
