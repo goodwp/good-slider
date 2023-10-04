@@ -1,37 +1,41 @@
 {
-    "name": "good-slider",
-    "version": "1.2.0",
-    "description": "A simple and extendable slider block using Swiper",
-    "author": "goodwp",
-    "license": "GPL-2.0-or-later",
-    "main": "build/index.js",
-    "scripts": {
-        "build": "wp-scripts build",
-        "packages-update": "wp-scripts packages-update",
-        "plugin-zip": "wp-scripts plugin-zip",
-        "start": "wp-scripts start",
-        "dev:start": "wp-env start",
-        "dev:stop": "wp-env stop",
-        "dev:i18n": "wp-env run cli 'wp i18n make-pot wp-content/plugins/good-slider wp-content/plugins/good-slider/languages/good-slider.pot --exclude=\"build\" --domain=good-slider'"
-    },
-    "devDependencies": {
-        "@wordpress/scripts": "^26.13.0"
-    },
-    "dependencies": {
-        "@wordpress/components": "^25.8.0",
-        "@wordpress/edit-post": "^7.19.0",
-        "@wordpress/editor": "^13.19.0",
-        "@wordpress/i18n": "^4.42.0",
-        "@wordpress/plugins": "^6.10.0",
-        "swiper": "^8.4.4"
-    },
-    "files": [
-        "CHANGELOG.md",
-        "good-slider.php",
-        "README.md",
-        "readme.txt",
-        "build",
-        "languages",
-        "src"
-    ]
+  "name": "good-slider",
+  "version": "1.2.0",
+  "description": "A simple and extendable slider block using Swiper",
+  "author": "goodwp",
+  "license": "GPL-2.0-or-later",
+  "main": "build/index.js",
+  "scripts": {
+    "build": "wp-scripts build",
+    "packages-update": "wp-scripts packages-update",
+    "plugin-zip": "wp-scripts plugin-zip",
+    "start": "wp-scripts start",
+    "dev:start": "wp-env start",
+    "dev:stop": "wp-env stop",
+    "dev:i18n": "wp-env run cli 'wp i18n make-pot wp-content/plugins/good-slider wp-content/plugins/good-slider/languages/good-slider.pot --exclude=\"build\" --domain=good-slider'"
+  },
+  "engines": {
+    "node": ">=16.19.1",
+    "npm": ">=8.19.3 <9"
+  },
+  "devDependencies": {
+    "@wordpress/scripts": "26.13.3"
+  },
+  "dependencies": {
+    "@wordpress/components": "25.8.3",
+    "@wordpress/edit-post": "7.19.3",
+    "@wordpress/editor": "13.19.3",
+    "@wordpress/i18n": "4.42.3",
+    "@wordpress/plugins": "6.10.3",
+    "swiper": "^8.4.4"
+  },
+  "files": [
+    "CHANGELOG.md",
+    "good-slider.php",
+    "README.md",
+    "readme.txt",
+    "build",
+    "languages",
+    "src"
+  ]
 }
