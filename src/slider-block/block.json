@@ -14,13 +14,41 @@
         }
     },
     "supports": {
-        "html": false,
         "align": ["wide", "full"],
+        "anchor": true,
+        "background": {
+			"backgroundImage": true
+		},
         "className": false,
+        "color": {
+            "background": true,
+			"gradients": true,
+			"heading": true,
+			"button": true,
+			"link": true,
+            "text": true,
+			"__experimentalDefaultControls": {
+				"background": true,
+				"text": true
+			}
+        },
+        "dimensions": {
+            "minHeight": true
+        },
+        "html": false,
+        "layout": false,
         "spacing": {
-            "padding": false,
-            "margin": true,
-            "blockGap": true
+            "padding": ["top", "bottom"],
+            "margin": ["top", "bottom"],
+            "blockGap": false,
+            "__experimentalDefaultControls": {
+				"padding": true,
+				"blockGap": false
+			}
+        },
+        "typography": {
+            "fontSize": true,
+            "lineHeight": true
         }
     },
     "selectors": {

@@ -63,7 +63,7 @@ export default function Edit(props) {
             placeholder: SliderPlaceHolder,
             templateLock: false,
             renderAppender: InnerBlocks.ButtonBlockAppender,
-            __experimentalCaptureToolbars: true,
+            __experimentalCaptureToolbars: true
         },
         props
     );

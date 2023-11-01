@@ -6,7 +6,7 @@ export default function Edit(props) {
     const innerBlocksSettings = applyFilters(
         "good-slider.item.innerBlocks-settings",
         {
-            __experimentalCaptureToolbars: false,
+            __experimentalCaptureToolbars: true,
         },
         props
     );

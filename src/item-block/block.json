@@ -8,25 +8,41 @@
     "icon": "slides",
     "description": "A carousel slider",
     "supports": {
-        "html": false,
-        "inserter": true,
-        "alignWide": false,
         "align": false,
+        "alignWide": false,
         "ariaLabel": true,
+        "anchor": true,
+        "background": {
+			"backgroundImage": true
+		},
         "color": {
             "background": true,
+			"gradients": true,
+			"heading": true,
+			"button": true,
+			"link": true,
             "text": true,
-            "gradients": true,
-            "link": true,
-            "enableContrastChecker": true
+			"__experimentalDefaultControls": {
+				"background": true,
+				"text": true
+			}
         },
+        "dimensions": {
+            "minHeight": true
+        },
+        "html": false,
+        "layout": false,
         "spacing": {
-            "padding": ["top", "bottom"],
-            "blockGap": true,
+            "padding": true,
+            "blockGap": false,
             "__experimentalDefaultControls": {
-                "padding": true,
-                "blockGap": true
-            }
+				"padding": true,
+				"blockGap": false
+			}
+        },
+        "typography": {
+            "fontSize": true,
+            "lineHeight": true
         }
     },
     "parent": ["goodwp/good-slider"],
