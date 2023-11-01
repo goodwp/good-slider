@@ -3,7 +3,7 @@ Contributors:      goodwpio, gaambo
 Tags:              block, slider, swiper
 Requires at least: 6.2
 Tested up to:      6.4
-Stable tag:        1.3.1
+Stable tag:        2.00
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -61,6 +61,31 @@ You can use the `good-slider/swiper-script-handle` filter and set it to `good-sl
 Yes, we are working on exposing the most common configuration options (slides shown, spacing, colors,...) via the block's settings.
 
 == Changelog ==
+
+= 2.0.0 (2023-11-01) =
+!! Some breaking changes:
+
+- Tweak: Changed block supports for slider and item block
+  - Slider block:
+     - Supports anchor/ID
+     - Supports background image
+     - Supports all colors (background, gradients, heading, button, link, text)
+     - Supports minimum height
+     - Supports top+bottom padding and margin
+     - Supports typography
+  - Slider item block
+     - Supports anchor/ID
+     - Supports background image
+     - Supports all colors (background, gradients, heading, button, link, text)
+     - Supports minimum height
+     - Supports padding (all sides)
+     - Supports typography
+- Tweak: Changed class name of main wrapper block to `wp-block-good-slider`.
+  The old classes were `wp-block-good-slider-slider` + `good-slider` and are not set on the block anymore.
+  A block deprecation was added to migrate blocks when viewing in editor.
+- Compatibility: Requires WordPress 6.2 (because of WP HTML Tag Manager)
+- Compatibility: Tested up to WordPress 6.4
+- Dev: Update @wordpress packages.
 
 = 1.3.1 (2023-10-04) =
 - Fix: Fix swiper-full bundle not working (because Swiper is not exported to window).
