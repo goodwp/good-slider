@@ -19,14 +19,15 @@
     "npm": ">=8.19.3 <9"
   },
   "devDependencies": {
-    "@wordpress/scripts": "26.13.3"
+    "@wordpress/env": "^8.10.0",
+    "@wordpress/scripts": "26.13.10"
   },
   "dependencies": {
-    "@wordpress/components": "25.8.3",
-    "@wordpress/edit-post": "7.19.3",
-    "@wordpress/editor": "13.19.3",
-    "@wordpress/i18n": "4.42.3",
-    "@wordpress/plugins": "6.10.3",
+    "@wordpress/components": "25.8.10",
+    "@wordpress/edit-post": "7.19.10",
+    "@wordpress/editor": "13.19.10",
+    "@wordpress/i18n": "4.42.10",
+    "@wordpress/plugins": "6.10.10",
     "swiper": "^8.4.4"
   },
   "files": [
