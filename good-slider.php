@@ -3,7 +3,7 @@
 /**
  * Plugin Name:       Good Slider
  * Description:       A simple and extendable slider block using Swiper
- * Requires at least: 6.0
+ * Requires at least: 6.2
  * Requires PHP:      7.4
  * Version:           1.3.1
  * Author:            GoodWP
@@ -163,12 +163,12 @@ function renderSliderBlock($attributes, $content)
      * @param array $attributes the block instances attributes
      */
     $swiperOptions = apply_filters('good-slider/swiper-options', [], $attributes);
-    $content = preg_replace(
-        '/' . preg_quote('class="', '/') . '/',
-        'data-swiper-options="' . esc_attr(wp_json_encode($swiperOptions)) . '" class="',
-        $content,
-        1
-    );
+
+    $html = new \WP_HTML_Tag_Processor($content);
+    if ($html->next_tag(['class' => 'wp-block-good-slider'])) {
+        $html->set_attribute('data-swiper-options', wp_json_encode($swiperOptions));
+    }
+    return $html->get_updated_html();
 
     return $content;
 }
