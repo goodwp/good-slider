@@ -5,7 +5,7 @@
         );
         return;
     }
-    const blocks = document.querySelectorAll(".wp-block-good-slider-slider");
+    const blocks = document.querySelectorAll(".wp-block-good-slider");
     blocks.forEach((block) => {
         block.classList.add("swiper");
         const wrapper = document.createElement("div");

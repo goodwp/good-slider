@@ -16,11 +16,15 @@
     "supports": {
         "html": false,
         "align": ["wide", "full"],
+        "className": false,
         "spacing": {
             "padding": false,
             "margin": true,
             "blockGap": true
         }
+    },
+    "selectors": {
+        "root": ".wp-block-good-slider"
     },
     "textdomain": "good-slider",
     "editorScript": "file:./index.js",
