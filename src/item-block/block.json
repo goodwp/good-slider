@@ -31,5 +31,6 @@
     },
     "parent": ["goodwp/good-slider"],
     "textdomain": "good-slider",
-    "editorScript": "file:./index.js"
+    "editorScript": "file:./index.js",
+    "viewScript": ["good-slider"]
 }

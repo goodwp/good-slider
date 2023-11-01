@@ -94,7 +94,7 @@ function registerAssets()
 
     /**
      * 2. Plugins frontend js
-     * Do not add as viewScript to block,
+     * Do not add as file-viewScript to block but with asset handle,
      * because needs to be registerd with custom swiper handle
      */
     $scriptAssetFile = plugin_dir_path(__FILE__) . 'build/frontend.asset.php';
@@ -127,8 +127,6 @@ add_action('wp_enqueue_scripts', __NAMESPACE__ . '\registerAssets');
  */
 function renderSliderBlock($attributes, $content)
 {
-    wp_enqueue_script('good-slider');
-
     /**
      * Allows filtering the handle of the script to enqueue which contains swiper
      *

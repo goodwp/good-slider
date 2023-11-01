@@ -29,5 +29,6 @@
     "textdomain": "good-slider",
     "editorScript": "file:./index.js",
     "editorStyle": "file:./index.css",
+    "viewScript": ["good-slider"],
     "style": "file:./style-index.css"
 }
