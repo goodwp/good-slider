@@ -15,19 +15,19 @@
     "dev:i18n": "wp-env run cli 'wp i18n make-pot wp-content/plugins/good-slider wp-content/plugins/good-slider/languages/good-slider.pot --exclude=\"build\" --domain=good-slider'"
   },
   "engines": {
-    "node": ">=16.19.1",
-    "npm": ">=8.19.3 <9"
+    "node": ">=20.10.0",
+    "npm": ">=10.2.3"
   },
   "devDependencies": {
-    "@wordpress/env": "^8.10.0",
-    "@wordpress/scripts": "26.13.10"
+    "@wordpress/env": "^9.5.0",
+    "@wordpress/scripts": "^27.4.0"
   },
   "dependencies": {
-    "@wordpress/components": "25.8.10",
-    "@wordpress/edit-post": "7.19.10",
-    "@wordpress/editor": "13.19.10",
-    "@wordpress/i18n": "4.42.10",
-    "@wordpress/plugins": "6.10.10",
+    "@wordpress/components": "^26.0.5",
+    "@wordpress/edit-post": "^7.28.7",
+    "@wordpress/editor": "^13.28.6",
+    "@wordpress/i18n": "^4.51.1",
+    "@wordpress/plugins": "^6.19.5",
     "swiper": "^8.4.4"
   },
   "files": [
