@@ -2,8 +2,8 @@
 /**
  * Plugin Name:       Good Slider
  * Description:       A simple and extendable slider block using Swiper
- * Requires at least: 6.2
- * Requires PHP:      8.2
+ * Requires at least: 6.4
+ * Requires PHP:      8.1
  * Version:           3.0.0
  * Author:            GoodWP
  * Author URI:        https://goodwp.io
@@ -91,8 +91,9 @@ function register_assets(): void {
 	$script_asset_file   = plugin_dir_path( __FILE__ ) . 'build/frontend.asset.php';
 	$scrip_asset_data    = require $script_asset_file;
 	$script_dependencies = $scrip_asset_data['dependencies'];
+
 	/**
-	 * This filter is documented in renderSliderBlock (good-slider.php#108ff)
+	 * This filter is documented in Blocks\Slider\render_block (src/blocks/slider/index.php#40ff)
 	 * use good-slider-swiper or good-slider-swiper-full for examples
 	 */
 	$swiper_script_handle = apply_filters( 'good-slider/swiper-script-handle', 'good-slider-swiper' );

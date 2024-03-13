@@ -9,6 +9,9 @@
       "homepage": "https://goodwp.io"
     }
   ],
+  "require": {
+    "php": ">=8.1"
+  },
   "require-dev": {
     "roots/wordpress-no-content": "^6.4",
     "wp-coding-standards/wpcs": "^3.0",

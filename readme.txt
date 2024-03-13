@@ -21,8 +21,8 @@ Through the filters it's also very easy to extend in your own functions.php file
 
 = Minimal Requirements =
 
-- PHP 7.4 or newer
-- WordPress 6.0 or newer
+- PHP 8.1 or newer
+- WordPress 6.4 or newer
 
 = Automatic Installation =
 
