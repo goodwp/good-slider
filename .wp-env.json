@@ -1,7 +1,7 @@
 {
-    "phpVersion": "8.1",
-    "core": "WordPress/WordPress#6.4",
-    "mappings": {
-        "wp-content/plugins/good-slider": "./"
-    }
+  "phpVersion": "8.2",
+  "core": "WordPress/WordPress#6.5",
+  "mappings": {
+    "wp-content/plugins/good-slider": "./"
+  }
 }
