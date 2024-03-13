@@ -1,0 +1,27 @@
+.wp-block-good-slider {
+    //padding: 0.5rem;
+    //border: 1px solid black;
+
+    .wp-block-good-slider__slides {
+        min-height: inherit;
+        // TODO: maybe make non-js fallback
+        //display: flex;
+        //flex-direction: row;
+        //flex-wrap: nowrap;
+        //overflow-x: scroll;
+        //position: relative;
+
+        > .wp-block-good-slider__slide {
+            //width: auto;
+            //flex: 0 0 100%;
+            min-height: inherit;
+
+            box-sizing: border-box; // Make padding work
+
+            display: flex;
+
+            justify-content: var(--content-position-x, center);
+            align-items: var(--content-position-y, center);
+        }
+    }
+}

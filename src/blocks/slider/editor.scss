@@ -1,0 +1,15 @@
+.wp-block-good-slider {
+    .wp-block-good-slider__slides {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+        position: relative;
+
+        scroll-sn > .wp-block {
+            //border: 1px solid black;
+            width: auto;
+            flex: 0 0 100%;
+        }
+    }
+}
