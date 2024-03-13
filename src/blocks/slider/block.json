@@ -8,13 +8,13 @@
     "icon": "slides",
     "description": "A carousel slider",
     "attributes": {
-        "navigation": {
-            "type": "boolean",
-            "default": true
-        },
-        "pagination": {
-            "type": "boolean",
-            "default": true
+        "swiperOptions": {
+            "type": "object",
+            "default": {
+                "navigation": true,
+                "pagination": true,
+                "slidesPerView": 1
+            }
         }
     },
     "allowedBlocks": [ "core/cover" ],
@@ -51,10 +51,6 @@
     },
     "textdomain": "good-slider",
     "editorScript": "file:./index.js",
-    "editorStyle": "file:./index.css",
     "viewScript": [ "good-slider" ],
-    "providesContext": {
-        "good-slider/style": "style"
-    },
     "style": "file:./style-index.css"
 }

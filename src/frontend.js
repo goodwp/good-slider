@@ -7,6 +7,7 @@
     }
     const blocks = document.querySelectorAll( ".wp-block-good-slider" );
     blocks.forEach( ( block ) => {
+        block.classList.add( "is-good-slider-initializing" );
         const wrapper = block.querySelector( ":scope > .swiper-wrapper" );
         const slides = wrapper.children;
 
@@ -25,5 +26,7 @@
             createElements: true,
             ...blockSwiperConfig,
         } );
+        block.classList.remove( "is-good-slider-initializing" );
+        block.classList.add( "is-good-slider-initialized" );
     } );
 } )();

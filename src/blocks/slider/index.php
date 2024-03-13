@@ -66,21 +66,7 @@ function render_block( array $attributes, string $content = '' ): string {
 		wp_enqueue_style( $style_handle );
 	}
 
-	/**
-	 * Allows filtering the configuration options passed to swiper
-	 *
-	 * @param array $options (@see https://swiperjs.com/swiper-api)
-	 * @param array $attributes the block instances attributes
-	 */
-	$swiper_options = apply_filters(
-		'good-slider/swiper-options',
-		[
-			'pagination'    => $attributes['pagination'] ?? false,
-			'navigation'    => $attributes['navigation'] ?? false,
-			'slidesPerView' => 1,
-		],
-		$attributes
-	);
+	$swiper_options = build_swiper_options( $attributes );
 
 	return sprintf(
 		'<div %1$s>
@@ -96,4 +82,43 @@ function render_block( array $attributes, string $content = '' ): string {
 		),
 		$content // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 	);
+}
+
+/**
+ * Builds swiper options from the block attributes and allows filtering them.
+ *
+ * @param array $attributes The block instances attributes.
+ * @return array The built and filtered swiper_options to be passed to swiper on the frontend.
+ */
+function build_swiper_options( array $attributes ): array {
+
+	$swiper_options = $attributes['swiperOptions'] ?? [];
+
+	// Build some sensible defaults for slidesPerView and breakpoints.
+	if ( isset( $swiper_options['slidesPerView'] ) && absint( $swiper_options['slidesPerView'] ) > 0 ) {
+		$slides_per_view                 = absint( $swiper_options['slidesPerView'] );
+		$swiper_options['slidesPerView'] = 1; // Mobile default.
+		$swiper_options['breakpoints']   = [
+			'601'  => [
+				'slidesPerView' => max( 1, absint( $slides_per_view / 2 ) ),
+			],
+			'1081' => [
+				'slidesPerView' => $slides_per_view,
+			],
+		];
+	}
+
+	/**
+	 * Allows filtering the configuration options passed to swiper
+	 *
+	 * @param array $swiper_options (@see https://swiperjs.com/swiper-api)
+	 * @param array $attributes the block instances attributes
+	 */
+	$swiper_options = apply_filters(
+		'good-slider/swiper-options',
+		$swiper_options,
+		$attributes
+	);
+
+	return $swiper_options;
 }

@@ -57,7 +57,6 @@
         }
     },
     "parent": [ "good-slider/slider" ],
-    "usesContext": [ "good-slider/style" ],
     "textdomain": "good-slider",
     "editorScript": "file:./index.js",
     "viewScript": [ "good-slider" ]
