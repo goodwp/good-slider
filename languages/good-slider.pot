@@ -2,14 +2,14 @@
 # This file is distributed under the GPL-3.0-or-later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Good Slider 3.0.1\n"
+"Project-Id-Version: Good Slider 3.1.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/good-slider\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2024-03-14T15:38:39+00:00\n"
+"POT-Creation-Date: 2024-03-14T19:03:59+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.10.0\n"
 "X-Domain: good-slider\n"
@@ -34,7 +34,7 @@ msgstr ""
 msgid "https://goodwp.io"
 msgstr ""
 
-#: src/blocks/slider/edit/block-controls.js:34
+#: src/blocks/slider/edit/block-controls.js:46
 #: src/blocks/slider/edit/placeholder.js:31
 msgid "Add Slide"
 msgstr ""

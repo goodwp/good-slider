@@ -20,3 +20,5 @@ composer.json
 composer.lock
 .prettierrc.js
 phpcs.xml
+examples
+README.md
