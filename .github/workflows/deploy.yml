@@ -1,55 +1,55 @@
 name: Deploy to WordPress.org
 
 on:
-    release:
-        types: [published]
+  release:
+    types: [ published ]
 
 jobs:
-    new-release:
-        name: New release
-        runs-on: ubuntu-latest
-        steps:
-            - name: Checkout code
-              uses: actions/checkout@v2
+  new-release:
+    name: New release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-            - name: Set up Node.js
-              uses: actions/setup-node@v2
-              with:
-                  node-version: 16
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 20
 
-            - name: Get npm cache directory
-              id: npm-cache
-              run: |
-                  echo "dir=$(npm config get cache)" >> $GITHUB_OUTPUT
-            - uses: actions/cache@v2
-              with:
-                  path: ${{ steps.npm-cache.outputs.dir }}
-                  key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-                  restore-keys: |
-                      ${{ runner.os }}-node-
-            - name: Install Node.js dependencies
-              run: npm ci
+      - name: Get npm cache directory
+        id: npm-cache
+        run: |
+          echo "dir=$(npm config get cache)" >> $GITHUB_OUTPUT
+      - uses: actions/cache@v2
+        with:
+          path: ${{ steps.npm-cache.outputs.dir }}
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+      - name: Install Node.js dependencies
+        run: npm ci
 
-            - name: Build JS/CSS assets
-              run: |
-                  npm run build
+      - name: Build JS/CSS assets
+        run: |
+          npm run build
 
-            - name: WordPress Plugin Deploy
-              id: deploy
-              uses: 10up/action-wordpress-plugin-deploy@1.5.0
-              with:
-                  generate-zip: true
-              env:
-                  SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
-                  SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
-                  SLUG: good-slider
+      - name: WordPress Plugin Deploy
+        id: deploy
+        uses: 10up/action-wordpress-plugin-deploy@1.5.0
+        with:
+          generate-zip: true
+        env:
+          SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
+          SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
+          SLUG: good-slider
 
-            - name: Upload release asset
-              uses: actions/upload-release-asset@v1
-              env:
-                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-              with:
-                  upload_url: ${{ github.event.release.upload_url }}
-                  asset_path: ${{github.workspace}}/${{ github.event.repository.name }}.zip
-                  asset_name: ${{ github.event.repository.name }}.zip
-                  asset_content_type: application/zip
+      - name: Upload release asset
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ github.event.release.upload_url }}
+          asset_path: ${{github.workspace}}/${{ github.event.repository.name }}.zip
+          asset_name: ${{ github.event.repository.name }}.zip
+          asset_content_type: application/zip
