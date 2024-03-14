@@ -15,3 +15,8 @@
 package.json
 package-lock.json
 README.md
+webpack.config.js
+composer.json
+composer.lock
+.prettierrc.js
+phpcs.xml
