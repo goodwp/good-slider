@@ -2,11 +2,13 @@ import {
     useBlockProps,
     useInnerBlocksProps,
     ButtonBlockAppender,
+    store as blockEditorStore,
 } from "@wordpress/block-editor";
 import SliderInspectorControls from "./inspector-controls";
 import SliderBlockControls from "./block-controls";
 import SliderPlaceHolder from "./placeholder";
 import { getSliderStyleFromOptions, useHasTemplateLock } from "./util";
+import { useSelect } from "@wordpress/data";
 
 const SLIDE_BLOCK = "good-slider/slide";
 
@@ -16,6 +18,12 @@ const Edit = ( { clientId, attributes, setAttributes } ) => {
         className: "wp-block-good-slider",
     } );
     const shouldRenderAppender = useHasTemplateLock( clientId );
+
+    const hasInnerBlocks = useSelect(
+        ( select ) =>
+            select( blockEditorStore ).getBlocks( clientId ).length > 0,
+        [ clientId ]
+    );
 
     const innerBlocksProps = useInnerBlocksProps(
         {
@@ -35,8 +43,10 @@ const Edit = ( { clientId, attributes, setAttributes } ) => {
             defaultBlock: {
                 name: SLIDE_BLOCK,
             },
-            directInsert: true,
-            template: [ [ SLIDE_BLOCK ] ],
+            // directInsert: true,
+            // Avoid template sync when the `templateLock` value is `all` or `contentOnly`.
+            // See: https://github.com/WordPress/gutenberg/pull/45632
+            template: ! hasInnerBlocks ? [ [ SLIDE_BLOCK ] ] : undefined,
             templateLock,
             renderAppender: false, // messes with flex of slider
             __experimentalCaptureToolbars: true,
