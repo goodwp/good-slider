@@ -72,6 +72,28 @@ Also, v3.0.0 introduced a UI for enabling/disabling some of the most common sett
 
 We are working on adding more UI controls but also providing the possibility for developers to disable them.
 
+= How can I lock the editing experience (e.g. in patterns)? =
+
+The block integrates with features WordPress core provides to lock and curate the editing experience.
+
+**Template locking**
+Both the slider and slide block have a `templateLock` attributes, which you can set in variations, patterns or templates to any of the values `[ "all", "insert", "contentOnly", false ]`.
+
+See the [examples on GitHub](https://github.com/goodwp/good-slider/tree/main/examples).
+
+**Example 1:** (fixed-slides.html) Create a slider with a fixed amount of slides, but flexible content of those slides:
+Set the `templateLock` attribute to "all" on the slider block and to `false` on all slides.
+
+**Allowed blocks**
+Since WordPress 6.5 you can set a `allowedBlocks` setting on all instances of a block type upon registration.
+If you want to globally restrict the allowed blocks inside slides, [have a look at this new feature](https://make.wordpress.org/core/2024/03/09/miscellaneous-editor-changes-in-wordpress-6-5/#support-for-new-allowedblocks-field-in-block-json).
+
+**Example 2:** (allowed-blocks.html) Create a slider with restricted allowed blocks inside slides. Set the `allowedBlocks` attribute on the slide block to an array of allowed block types.
+
+**Variations**
+You can also create block variations of the slide block with the innerBlocks and attributes prefilled.
+See slide-variations.js in the examples directory.
+
 == Changelog ==
 
 = 3.0.1 (2024-03-14) =

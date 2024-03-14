@@ -71,6 +71,43 @@
 <!-- /wp:paragraph -->
 <!-- /wp:good-slider/slide -->
 
+<!-- /wp:good-slider/slider -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Slider with fixed slides</h2>
+<!-- /wp:heading -->
+
+<!-- wp:good-slider/slider {"templateLock":"all"} -->
+<!-- wp:good-slider/slide {"templateLock":false} -->
+<!-- wp:paragraph {"align":"center","placeholder":"Write title…"} -->
+<p class="has-text-align-center">1st Slide</p>
+<!-- /wp:paragraph -->
+<!-- /wp:good-slider/slide -->
+
+<!-- wp:good-slider/slide {"templateLock":false} -->
+<!-- wp:paragraph {"align":"center","placeholder":"Write title…"} -->
+<p class="has-text-align-center">2nd Slide</p>
+<!-- /wp:paragraph -->
+<!-- /wp:good-slider/slide -->
+
+<!-- wp:good-slider/slide {"templateLock":false} -->
+<!-- wp:paragraph {"align":"center","placeholder":"Write title…"} -->
+<p class="has-text-align-center">3rd Slide</p>
+<!-- /wp:paragraph -->
+<!-- /wp:good-slider/slide -->
+<!-- /wp:good-slider/slider -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Slider with restricted slide contents</h2>
+<!-- /wp:heading -->
+
+<!-- wp:good-slider/slider {"templateLock":"all"} -->
+<!-- wp:good-slider/slide {"templateLock":false,"allowedBlocks":["core/paragraph"]} -->
+<!-- wp:paragraph {"align":"center","placeholder":"Write title…"} -->
+<p class="has-text-align-center">1st Slide</p>
+<!-- /wp:paragraph -->
+<!-- /wp:good-slider/slide -->
+
 <!-- /wp:good-slider/slider -->]]></content:encoded>
             <excerpt:encoded><![CDATA[]]></excerpt:encoded>
             <wp:post_id>8</wp:post_id>
