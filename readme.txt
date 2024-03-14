@@ -4,7 +4,7 @@ Tags:              block, slider, swiper
 Requires at least: 6.2
 Requires PHP:      8.1
 Tested up to:      6.5
-Stable tag:        3.0.1
+Stable tag:        3.1.0
 License:           GPL-3.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -18,6 +18,8 @@ Therefore, it provides many **PHP filter hooks** to change its behaviour.
 
 The plugin is used in some custom themes and through it's PHP configuration it's perfect for a locked-in design (eg agency, clients).
 Through the filters it's also very easy to extend in your own functions.php file.
+
+If you want to report an issue or suggest features, please take a look at our [GitHub repository](https://github.com/goodwp/good-slider).
 
 == Installation ==
 
@@ -59,7 +61,7 @@ Yes you can use the `good-slider/swiper-script-handle` filter hook to change the
 By default, a stripped-down version of Swiper is enqueued, which only includes the most commonly used modules (A11y, Keyboard, Lazy, Navigation, Pagination).
 You can use the `good-slider/swiper-script-handle` filter and set it to `good-slider-swiper-full` to enqueue the full Swiper bundle with all modules, or you can use or own (see above).
 
-= Will there be a UI for more settings the block in the editor? =
+= Does the plugin provide a UI for slider settings and styles in the block editor? =
 
 Thanks to recent additions to core, our slider and slide block now allow for setting most of the common styling settings:
 - spacing
@@ -95,6 +97,12 @@ You can also create block variations of the slide block with the innerBlocks and
 See slide-variations.js in the examples directory.
 
 == Changelog ==
+
+= 3.1.0 (2024-03-14) =
+
+- Tweak: Add `allowedBlocks` attribute to slide block.
+- Fix: Fix default variations being inserted by custom block inserters.
+- Docs: Add examples for locking and restricting the slider block.
 
 = 3.0.1 (2024-03-14) =
 
