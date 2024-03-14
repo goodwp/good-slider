@@ -2,14 +2,14 @@
 # This file is distributed under the GPL-3.0-or-later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Good Slider 2.1.0\n"
+"Project-Id-Version: Good Slider 3.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/good-slider\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2024-03-13T15:14:10+00:00\n"
+"POT-Creation-Date: 2024-03-14T13:42:44+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.10.0\n"
 "X-Domain: good-slider\n"
@@ -34,30 +34,52 @@ msgstr ""
 msgid "https://goodwp.io"
 msgstr ""
 
-#: src/blocks/slider/edit.js:56
-#: src/blocks/slider/edit.js:86
+#: src/blocks/slider/edit/block-controls.js:34
+#: src/blocks/slider/edit/placeholder.js:31
 msgid "Add Slide"
 msgstr ""
 
-#: src/blocks/slider/edit.js:76
+#: src/blocks/slider/edit/inspector-controls.js:31
+msgid "Slider Settings"
+msgstr ""
+
+#: src/blocks/slider/edit/inspector-controls.js:35
+msgid "Navigation"
+msgstr ""
+
+#: src/blocks/slider/edit/inspector-controls.js:47
+msgid "Pagination"
+msgstr ""
+
+#: src/blocks/slider/edit/inspector-controls.js:59
+msgid "Slides Per View Desktop"
+msgstr ""
+
+#: src/blocks/slider/edit/inspector-controls.js:60
+msgid "The number of slides to display per view on desktop."
+msgstr ""
+
+#: src/blocks/slider/edit/inspector-controls.js:78
+msgid "More settings can be set via the 'good-slider/swiper-options' PHP filter"
+msgstr ""
+
+#: src/blocks/slider/edit/placeholder.js:21
 msgctxt "block placeholder label"
 msgid "Good Slider"
 msgstr ""
 
-#: src/blocks/slider/edit.js:81
+#: src/blocks/slider/edit/placeholder.js:26
 msgid "Add a slide block to start creating your slider."
 msgstr ""
 
-#: src/blocks/slider/edit.js:123
-msgid "Slider Settings"
+#: src/blocks/item/block.json
+msgctxt "block title"
+msgid "Slider Item (deprecated)"
 msgstr ""
 
-#: src/blocks/slider/edit.js:126
-msgid "Navigation"
-msgstr ""
-
-#: src/blocks/slider/edit.js:138
-msgid "Pagination"
+#: src/blocks/item/block.json
+msgctxt "block description"
+msgid "Deprecated: Use good-slider/slide instead."
 msgstr ""
 
 #: src/blocks/slide/block.json

@@ -1,53 +1,53 @@
 {
-  "name": "good-slider",
-  "version": "3.0.0",
-  "description": "A simple and extendable slider block using Swiper",
-  "author": "GoodWP",
-  "license": "GPL-3.0-or-later",
-  "main": "build/index.js",
-  "scripts": {
-    "start": "wp-scripts start --webpack-copy-php",
-    "build": "wp-scripts build --webpack-copy-php",
-    "format": "wp-scripts format ./src",
-    "packages-update": "wp-scripts packages-update",
-    "plugin-zip": "wp-scripts plugin-zip",
-    "env": "wp-env",
-    "env:start": "wp-env start",
-    "env:start:debug": "wp-env start --xdebug",
-    "env:stop": "wp-env stop",
-    "i18n": "wp-env run cli 'wp i18n make-pot wp-content/plugins/good-slider wp-content/plugins/good-slider/languages/good-slider.pot --exclude=\"build\" --domain=good-slider'"
-  },
-  "engines": {
-    "node": ">=20.10.0",
-    "npm": ">=10.2.3"
-  },
-  "devDependencies": {
-    "@wordpress/env": "^9.5.0",
-    "@wordpress/prettier-config": "^3.10.0",
-    "@wordpress/scripts": "^27.4.0"
-  },
-  "dependencies": {
-    "@wordpress/block-editor": "^12.21.0",
-    "@wordpress/blocks": "^12.30.0",
-    "@wordpress/components": "^26.0.5",
-    "@wordpress/compose": "^6.30.0",
-    "@wordpress/data": "^9.23.0",
-    "@wordpress/edit-post": "^7.28.7",
-    "@wordpress/editor": "^13.28.6",
-    "@wordpress/element": "^5.30.0",
-    "@wordpress/hooks": "^3.53.0",
-    "@wordpress/i18n": "^4.51.1",
-    "@wordpress/icons": "^9.44.0",
-    "@wordpress/plugins": "^6.19.5",
-    "swiper": "^8.4.4"
-  },
-  "files": [
-    "CHANGELOG.md",
-    "good-slider.php",
-    "README.md",
-    "readme.txt",
-    "build",
-    "languages",
-    "src"
-  ]
+    "name": "good-slider",
+    "version": "3.0.0",
+    "description": "A simple and extendable slider block using Swiper",
+    "author": "GoodWP",
+    "license": "GPL-3.0-or-later",
+    "main": "build/index.js",
+    "scripts": {
+        "start": "wp-scripts start --webpack-copy-php",
+        "build": "wp-scripts build --webpack-copy-php",
+        "format": "wp-scripts format ./src",
+        "packages-update": "wp-scripts packages-update",
+        "plugin-zip": "wp-scripts plugin-zip",
+        "env": "wp-env",
+        "env:start": "wp-env start",
+        "env:start:debug": "wp-env start --xdebug",
+        "env:stop": "wp-env stop",
+        "i18n": "wp-env run cli wp i18n make-pot wp-content/plugins/good-slider wp-content/plugins/good-slider/languages/good-slider.pot --exclude=\"build\" --domain=good-slider"
+    },
+    "engines": {
+        "node": ">=20.10.0",
+        "npm": ">=10.2.3"
+    },
+    "devDependencies": {
+        "@wordpress/env": "^9.5.0",
+        "@wordpress/prettier-config": "^3.10.0",
+        "@wordpress/scripts": "^27.4.0"
+    },
+    "dependencies": {
+        "@wordpress/block-editor": "^12.21.0",
+        "@wordpress/blocks": "^12.30.0",
+        "@wordpress/components": "^26.0.5",
+        "@wordpress/compose": "^6.30.0",
+        "@wordpress/data": "^9.23.0",
+        "@wordpress/edit-post": "^7.28.7",
+        "@wordpress/editor": "^13.28.6",
+        "@wordpress/element": "^5.30.0",
+        "@wordpress/hooks": "^3.53.0",
+        "@wordpress/i18n": "^4.51.1",
+        "@wordpress/icons": "^9.44.0",
+        "@wordpress/plugins": "^6.19.5",
+        "swiper": "^8.4.4"
+    },
+    "files": [
+        "CHANGELOG.md",
+        "good-slider.php",
+        "README.md",
+        "readme.txt",
+        "build",
+        "languages",
+        "src"
+    ]
 }
