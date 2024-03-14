@@ -113,3 +113,5 @@ add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\register_assets' );
 
 require_once plugin_dir_path( __FILE__ ) . 'build/blocks/slider/index.php';
 require_once plugin_dir_path( __FILE__ ) . 'build/blocks/slide/index.php';
+// Deprecated. Remove in 3.1.0.
+require_once plugin_dir_path( __FILE__ ) . 'build/blocks/item/index.php';

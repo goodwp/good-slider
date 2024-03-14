@@ -13,7 +13,7 @@
         }
     }
 
-    // NO JS fallback
+    // NO JS fallback + Editor styling
     &:not(.is-good-slider-initializing):not(.is-good-slider-initialized) {
         .wp-block-good-slider__slides {
             display: flex;
@@ -26,6 +26,14 @@
                 width: auto;
                 flex: 0 0 100%;
                 flex-basis: calc(100% / var(--slides-per-view, 1));
+
+                @media (max-width: 1080px) {
+                    flex-basis: calc(100% / (var(--slides-per-view, 1) * 0.5));
+                }
+
+                @media (max-width: 600px) {
+                    flex-basis: 100%;
+                }
             }
         }
     }

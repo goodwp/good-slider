@@ -1,4 +1,4 @@
-import { registerBlockType } from "@wordpress/blocks";
+import { registerBlockType, registerBlockVariation } from "@wordpress/blocks";
 import { InnerBlocks } from "@wordpress/block-editor";
 
 import "./style.scss";
@@ -13,4 +13,17 @@ registerBlockType( metadata.name, {
     save: () => {
         return <InnerBlocks.Content />;
     },
+} );
+
+registerBlockVariation( metadata.name, {
+    name: "slider",
+    title: "3-slides Slider",
+    attributes: {
+        templateLock: "all",
+    },
+    innerBlocks: [
+        [ "good-slider/slide" ],
+        [ "good-slider/slide" ],
+        [ "good-slider/slide" ],
+    ],
 } );

@@ -7,6 +7,7 @@ import { addCard as addSlideIcon } from "@wordpress/icons";
 import { __ } from "@wordpress/i18n";
 import { useDispatch, useSelect } from "@wordpress/data";
 import { createBlock } from "@wordpress/blocks";
+import { useHasTemplateLock } from "./util";
 
 /**
  * Slider Toolbar - '+ Add a Slide'
@@ -16,6 +17,7 @@ import { createBlock } from "@wordpress/blocks";
  * @return {JSX.Element} Returns ToolbarGroup.
  */
 const SliderBlockControls = ( { clientId } ) => {
+    const shouldRenderAppender = useHasTemplateLock( clientId );
     const { insertBlock } = useDispatch( blockEditorStore );
     // Create a Slide block and insert it.
     const addSlide = () => {
@@ -25,11 +27,13 @@ const SliderBlockControls = ( { clientId } ) => {
     return (
         <BlockControls>
             <ToolbarGroup>
-                <ToolbarButton
-                    icon={ addSlideIcon }
-                    onClick={ addSlide }
-                    label={ __( "Add Slide", "good-slider" ) }
-                />
+                { shouldRenderAppender && (
+                    <ToolbarButton
+                        icon={ addSlideIcon }
+                        onClick={ addSlide }
+                        label={ __( "Add Slide", "good-slider" ) }
+                    />
+                ) }
             </ToolbarGroup>
         </BlockControls>
     );

@@ -8,13 +8,25 @@ import { __ } from "@wordpress/i18n";
 import { getContentPositionStyles } from "./util";
 
 export default function Edit( { attributes, setAttributes } ) {
-    const { contentPosition } = attributes;
+    const { contentPosition, templateLock } = attributes;
     const contentPositionStyles = getContentPositionStyles( contentPosition );
     const blockProps = useBlockProps( {
         style: contentPositionStyles,
         className: "wp-block-good-slider__slide swiper-slide",
     } );
-    const innerBlocksProps = useInnerBlocksProps( blockProps, {} );
+    const innerBlocksProps = useInnerBlocksProps( blockProps, {
+        template: [
+            [
+                "core/paragraph",
+                {
+                    align: "center",
+                    placeholder: __( "Write title…" ),
+                    ...attributes,
+                },
+            ],
+        ],
+        templateLock, // By default if = null -> inherit.
+    } );
     return (
         <>
             <BlockControls group="block">

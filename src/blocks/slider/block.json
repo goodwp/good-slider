@@ -15,9 +15,12 @@
                 "pagination": true,
                 "slidesPerView": 1
             }
+        },
+        "templateLock": {
+            "type": [ "string", "boolean" ],
+            "enum": [ "all", "insert", "contentOnly", false ]
         }
     },
-    "allowedBlocks": [ "core/cover" ],
     "supports": {
         "align": [ "wide", "full" ],
         "anchor": true,

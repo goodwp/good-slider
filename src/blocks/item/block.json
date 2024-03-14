@@ -1,33 +1,20 @@
 {
     "$schema": "https://schemas.wp.org/trunk/block.json",
     "apiVersion": 3,
-    "name": "good-slider/slide",
-    "version": "3.0.0",
-    "title": "Slide",
+    "name": "good-slider/item",
+    "version": "0.1.0",
+    "title": "Slider Item (deprecated)",
     "category": "layout",
     "icon": "slides",
-    "description": "A single slide",
-    "attributes": {
-        "contentPosition": {
-            "type": "string",
-            "default": "center"
-        },
-        "templateLock": {
-            "type": [ "string", "boolean" ],
-            "enum": [ "all", "insert", "contentOnly", false ]
-        }
-    },
+    "description": "Deprecated: Use good-slider/slide instead.",
     "supports": {
+        "inserter": false,
         "align": false,
         "alignWide": false,
         "ariaLabel": true,
         "anchor": true,
         "background": {
-            "backgroundImage": true,
-            "backgroundSize": true,
-            "__experimentalDefaultControls": {
-                "backgroundImage": true
-            }
+            "backgroundImage": true
         },
         "color": {
             "background": true,
@@ -41,7 +28,6 @@
                 "text": true
             }
         },
-        "className": false,
         "dimensions": {
             "minHeight": true
         },
