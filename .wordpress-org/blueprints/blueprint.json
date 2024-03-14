@@ -1,0 +1,45 @@
+{
+    "$schema": "https://playground.wordpress.net/blueprint-schema.json",
+    "preferredVersions": {
+        "php": "8.1",
+        "wp": "6.4"
+    },
+    "features": {
+        "networking": true
+    },
+    "phpExtensionBundles": [ "kitchen-sink" ],
+    "landingPage": "/wp-admin/post.php?post=8&action=edit",
+    "steps": [
+        {
+            "step": "login",
+            "username": "admin",
+            "password": "password"
+        },
+        {
+            "step": "setSiteOptions",
+            "options": {
+                "blogname": "Good Slider Demo",
+                "blog_charset": "UTF-8",
+                "template": "twentytwentyfour",
+                "stylesheet": "twentytwentyfour"
+            }
+        },
+        {
+            "step": "installPlugin",
+            "pluginZipFile": {
+                "resource": "wordpress.org/plugins",
+                "slug": "good-slider"
+            },
+            "options": {
+                "activate": true
+            }
+        },
+        {
+            "step": "importFile",
+            "file": {
+                "resource": "url",
+                "url": "https://github.com/goodwp/good-slider/tree/main/.wordpress-org/blueprints/demo-content.xml"
+            }
+        }
+    ]
+}
