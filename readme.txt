@@ -4,7 +4,7 @@ Tags:              block, slider, swiper
 Requires at least: 6.2
 Requires PHP:      8.1
 Tested up to:      6.5
-Stable tag:        3.0.0
+Stable tag:        3.0.1
 License:           GPL-3.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -73,6 +73,10 @@ Also, v3.0.0 introduced a UI for enabling/disabling some of the most common sett
 We are working on adding more UI controls but also providing the possibility for developers to disable them.
 
 == Changelog ==
+
+= 3.0.1 (2024-03-14) =
+
+- Dev: Quick fix to remove some development files from the distributed plugin.
 
 = 3.0.0 (2024-03-14) =
 !! This version includes breaking changes !!

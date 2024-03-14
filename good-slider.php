@@ -4,7 +4,7 @@
  * Description:       A simple and extendable slider block using Swiper
  * Requires at least: 6.4
  * Requires PHP:      8.1
- * Version:           3.0.0
+ * Version:           3.0.1
  * Author:            GoodWP
  * Author URI:        https://goodwp.io
  * License:           GPL-3.0-or-later
