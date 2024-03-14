@@ -14,16 +14,3 @@ registerBlockType( metadata.name, {
         return <InnerBlocks.Content />;
     },
 } );
-
-registerBlockVariation( metadata.name, {
-    name: "slider",
-    title: "3-slides Slider",
-    attributes: {
-        templateLock: "all",
-    },
-    innerBlocks: [
-        [ "good-slider/slide" ],
-        [ "good-slider/slide" ],
-        [ "good-slider/slide" ],
-    ],
-} );
