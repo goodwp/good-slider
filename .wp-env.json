@@ -1,6 +1,6 @@
 {
   "phpVersion": "8.2",
-  "core": "WordPress/WordPress#6.5",
+  "core": "WordPress/WordPress#master",
   "mappings": {
     "wp-content/plugins/good-slider": "./"
   }

@@ -38,7 +38,7 @@
             "step": "importFile",
             "file": {
                 "resource": "url",
-                "url": "https://github.com/goodwp/good-slider/tree/main/.wordpress-org/blueprints/demo-content.xml"
+                "url": "https://raw.githubusercontent.com/goodwp/good-slider/main/.wordpress-org/blueprints/demo-content.xml"
             }
         }
     ]
