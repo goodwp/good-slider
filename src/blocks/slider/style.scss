@@ -28,7 +28,9 @@
                 flex-basis: calc(100% / var(--slides-per-view, 1));
 
                 @media (max-width: 1080px) {
-                    flex-basis: calc(100% / (var(--slides-per-view, 1) * 0.5));
+                    flex-basis: calc(
+                        100% / max(1, (var(--slides-per-view, 1) * 0.5))
+                    );
                 }
 
                 @media (max-width: 600px) {
