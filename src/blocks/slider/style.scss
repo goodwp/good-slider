@@ -1,0 +1,40 @@
+.wp-block-good-slider {
+    .wp-block-good-slider__slides {
+        min-height: inherit;
+
+        > .wp-block-good-slider__slide {
+            min-height: inherit;
+
+            box-sizing: border-box; // Make padding work
+
+            display: flex;
+            justify-content: var(--content-position-x, center);
+            align-items: var(--content-position-y, center);
+        }
+    }
+
+    // NO JS fallback + Editor styling
+    &:not(.is-good-slider-initializing):not(.is-good-slider-initialized) {
+        .wp-block-good-slider__slides {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            overflow-x: scroll;
+            position: relative;
+
+            > .wp-block-good-slider__slide {
+                width: auto;
+                flex: 0 0 100%;
+                flex-basis: calc(100% / var(--slides-per-view, 1));
+
+                @media (max-width: 1080px) {
+                    flex-basis: calc(100% / (var(--slides-per-view, 1) * 0.5));
+                }
+
+                @media (max-width: 600px) {
+                    flex-basis: 100%;
+                }
+            }
+        }
+    }
+}

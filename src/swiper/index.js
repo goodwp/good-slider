@@ -6,6 +6,6 @@ import { Swiper, A11y, Keyboard, Lazy, Navigation, Pagination } from "swiper";
 
 import "./style.scss";
 
-Swiper.use([A11y, Keyboard, Lazy, Navigation, Pagination]);
+Swiper.use( [ A11y, Keyboard, Lazy, Navigation, Pagination ] );
 
 window.Swiper = Swiper;

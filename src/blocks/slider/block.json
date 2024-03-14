@@ -2,35 +2,37 @@
     "$schema": "https://schemas.wp.org/trunk/block.json",
     "apiVersion": 3,
     "name": "good-slider/slider",
-    "version": "0.1.0",
+    "version": "3.0.0",
     "title": "Good Slider",
     "category": "layout",
     "icon": "slides",
     "description": "A carousel slider",
     "attributes": {
-        "tagName": {
-            "type": "string",
-            "default": "div"
+        "swiperOptions": {
+            "type": "object",
+            "default": {
+                "navigation": true,
+                "pagination": true,
+                "slidesPerView": 1
+            }
+        },
+        "templateLock": {
+            "type": [ "string", "boolean" ],
+            "enum": [ "all", "insert", "contentOnly", false ]
         }
     },
     "supports": {
-        "align": ["wide", "full"],
+        "align": [ "wide", "full" ],
         "anchor": true,
         "background": {
-			"backgroundImage": true
-		},
+            "backgroundImage": true
+        },
         "className": false,
         "color": {
             "background": true,
-			"gradients": true,
-			"heading": true,
-			"button": true,
-			"link": true,
-            "text": true,
-			"__experimentalDefaultControls": {
-				"background": true,
-				"text": true
-			}
+            "gradients": true,
+            "link": true,
+            "text": true
         },
         "dimensions": {
             "minHeight": true
@@ -38,13 +40,9 @@
         "html": false,
         "layout": false,
         "spacing": {
-            "padding": ["top", "bottom"],
-            "margin": ["top", "bottom"],
-            "blockGap": false,
-            "__experimentalDefaultControls": {
-				"padding": true,
-				"blockGap": false
-			}
+            "padding": false,
+            "margin": [ "top", "bottom" ],
+            "blockGap": false
         },
         "typography": {
             "fontSize": true,
@@ -56,7 +54,6 @@
     },
     "textdomain": "good-slider",
     "editorScript": "file:./index.js",
-    "editorStyle": "file:./index.css",
-    "viewScript": ["good-slider"],
+    "viewScript": [ "good-slider" ],
     "style": "file:./style-index.css"
 }

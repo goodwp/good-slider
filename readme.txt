@@ -2,17 +2,19 @@
 Contributors:      goodwpio, gaambo
 Tags:              block, slider, swiper
 Requires at least: 6.2
-Tested up to:      6.4
-Stable tag:        2.0.0
-License:           GPL-2.0-or-later
-License URI:       https://www.gnu.org/licenses/gpl-2.0.html
+Requires PHP:      8.1
+Tested up to:      6.5
+Stable tag:        3.0.0
+License:           GPL-3.0-or-later
+License URI:       https://www.gnu.org/licenses/gpl-3.0.html
 
 A simple and extendable slider block based on Swiper.
 
 == Description ==
 
-This plugin provides a very simple slider block which is based on [Swiper](https://swiperjs.com/).
-As of now, the plugin does not provide any slider configuration in the editor UI but provides many **PHP filter hooks** to change its behaviour.
+This plugin provides a very simple slider block which is based on [Swiper v8](https://swiperjs.com/).
+The plugin provides a UI for the most common swiper options (navigation, pagination, slides per view). But it is specifically made to be extended via PHP.
+Therefore, it provides many **PHP filter hooks** to change its behaviour.
 
 The plugin is used in some custom themes and through it's PHP configuration it's perfect for a locked-in design (eg agency, clients).
 Through the filters it's also very easy to extend in your own functions.php file.
@@ -21,8 +23,8 @@ Through the filters it's also very easy to extend in your own functions.php file
 
 = Minimal Requirements =
 
-- PHP 7.4 or newer
-- WordPress 6.0 or newer
+- PHP 8.1 or newer
+- WordPress 6.2 or newer
 
 = Automatic Installation =
 
@@ -37,15 +39,16 @@ We recommend installing the plugin extension through the WordPress Backend.
 
 1. Insert the Good Slider block into your content.
 2. Add slides to your slider and insert any block you like into a slide.
-3. The slide block also allows setting a background color and text color, so you don't need a group/cover block inside.
+3. The slide block also allows setting a background and text color, background image, spacing, typography etc. so you don't need a group/cover block inside.
 
 == Frequently Asked Questions ==
 
 = How can I change the swiper arguments (like slides shown etc) =
 
-As of now, there are no configuration UIs in the editor.
+The UI currently allows for enabling/disabling navigation and pagination and the desktops default number of slides per view.
+
 You can use the `good-slider/swiper-options` filter hook to set the swiper configuration for a specific block instance.
-All the available arguments are documented in the [Swiper documentation](https://swiperjs.com/swiper-api).
+All the available arguments are documented in the [Swiper v8 documentation](https://v8.swiperjs.com/swiper-api).
 
 = Can I use my own enqueued Swiper script? =
 
@@ -54,13 +57,39 @@ Yes you can use the `good-slider/swiper-script-handle` filter hook to change the
 = Can I use more Swiper options? =
 
 By default, a stripped-down version of Swiper is enqueued, which only includes the most commonly used modules (A11y, Keyboard, Lazy, Navigation, Pagination).
-You can use the `good-slider/swiper-script-handle` filter and set it to `good-slider-swiper-full` to enqueue the full Swiper bundle with all modules or you can use or own (see above).
+You can use the `good-slider/swiper-script-handle` filter and set it to `good-slider-swiper-full` to enqueue the full Swiper bundle with all modules, or you can use or own (see above).
 
-= Will there be a UI for the block in the editor? =
+= Will there be a UI for more settings the block in the editor? =
 
-Yes, we are working on exposing the most common configuration options (slides shown, spacing, colors,...) via the block's settings.
+Thanks to recent additions to core, our slider and slide block now allow for setting most of the common styling settings:
+- spacing
+- colors (text, background, link)
+- typography
+- background image
+- content positioning (justify-content + align-items)
+
+Also, v3.0.0 introduced a UI for enabling/disabling some of the most common settings of Swiper (navigation, pagination, slides shown).
+
+We are working on adding more UI controls but also providing the possibility for developers to disable them.
 
 == Changelog ==
+
+= 3.0.0 (2024-03-14) =
+!! This version includes breaking changes !!
+
+- New: A new `good-slider/slide` block is introduced. This block has better naming and more block supports.
+- Breaking: The `good-slider/item` block is now deprecated. Upon opening the editor all instance will be converted to `good-slider/slide` blocks.
+- Breaking: Remove the editor filters `good-slider.item.innerBlocks-settings` and `good-slider.slider.innerBlocks-settings`. Instead, use the new `templateLock` property of the slider and slide block and the `allowedBlocks` attribute for the slide block introduced in WordPress 6.5
+- Breaking: Removed tag name selector from slider block. Instead, wrap it in a group.
+- Tweak: Add more block supports to slide
+- Tweak: Editing experience is now horizontal and works with scrolling.
+- New: Adds UI controls for Swiper navigation, pagination and slides per view (+ sensible defaults for tablet/mobile)
+- Dev: Add formatting for PHP, JS and CSS
+- Dev: Better directory structure of blocks
+- Dev: Add WordPress Playground blueprint for easy demo of plugin
+- Dev: Migrate to WordPress code style
+- Compatibility: Test up to WordPres 6.5
+- License: Update to GPL v3
 
 = 2.0.0 (2023-11-01) =
 !! Some breaking changes:

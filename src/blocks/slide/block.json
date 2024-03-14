@@ -1,0 +1,67 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "good-slider/slide",
+    "version": "3.0.0",
+    "title": "Slide",
+    "category": "layout",
+    "icon": "slides",
+    "description": "A single slide",
+    "attributes": {
+        "contentPosition": {
+            "type": "string",
+            "default": "center"
+        },
+        "templateLock": {
+            "type": [ "string", "boolean" ],
+            "enum": [ "all", "insert", "contentOnly", false ]
+        }
+    },
+    "supports": {
+        "align": false,
+        "alignWide": false,
+        "ariaLabel": true,
+        "anchor": true,
+        "background": {
+            "backgroundImage": true,
+            "backgroundSize": true,
+            "__experimentalDefaultControls": {
+                "backgroundImage": true
+            }
+        },
+        "color": {
+            "background": true,
+            "gradients": true,
+            "heading": true,
+            "button": true,
+            "link": true,
+            "text": true,
+            "__experimentalDefaultControls": {
+                "background": true,
+                "text": true
+            }
+        },
+        "className": false,
+        "dimensions": {
+            "minHeight": true
+        },
+        "html": false,
+        "layout": false,
+        "spacing": {
+            "padding": true,
+            "blockGap": false,
+            "__experimentalDefaultControls": {
+                "padding": true,
+                "blockGap": false
+            }
+        },
+        "typography": {
+            "fontSize": true,
+            "lineHeight": true
+        }
+    },
+    "parent": [ "good-slider/slider" ],
+    "textdomain": "good-slider",
+    "editorScript": "file:./index.js",
+    "viewScript": [ "good-slider" ]
+}

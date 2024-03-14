@@ -3,29 +3,30 @@
     "apiVersion": 3,
     "name": "good-slider/item",
     "version": "0.1.0",
-    "title": "Slider Item",
+    "title": "Slider Item (deprecated)",
     "category": "layout",
     "icon": "slides",
-    "description": "A carousel slider",
+    "description": "Deprecated: Use good-slider/slide instead.",
     "supports": {
+        "inserter": false,
         "align": false,
         "alignWide": false,
         "ariaLabel": true,
         "anchor": true,
         "background": {
-			"backgroundImage": true
-		},
+            "backgroundImage": true
+        },
         "color": {
             "background": true,
-			"gradients": true,
-			"heading": true,
-			"button": true,
-			"link": true,
+            "gradients": true,
+            "heading": true,
+            "button": true,
+            "link": true,
             "text": true,
-			"__experimentalDefaultControls": {
-				"background": true,
-				"text": true
-			}
+            "__experimentalDefaultControls": {
+                "background": true,
+                "text": true
+            }
         },
         "dimensions": {
             "minHeight": true
@@ -36,17 +37,17 @@
             "padding": true,
             "blockGap": false,
             "__experimentalDefaultControls": {
-				"padding": true,
-				"blockGap": false
-			}
+                "padding": true,
+                "blockGap": false
+            }
         },
         "typography": {
             "fontSize": true,
             "lineHeight": true
         }
     },
-    "parent": ["goodwp/good-slider"],
+    "parent": [ "good-slider/slider" ],
     "textdomain": "good-slider",
     "editorScript": "file:./index.js",
-    "viewScript": ["good-slider"]
+    "viewScript": [ "good-slider" ]
 }
