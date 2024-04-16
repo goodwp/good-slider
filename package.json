@@ -15,7 +15,9 @@
         "env:start": "wp-env start",
         "env:start:debug": "wp-env start --xdebug",
         "env:stop": "wp-env stop",
-        "i18n": "wp-env run cli wp i18n make-pot wp-content/plugins/good-slider wp-content/plugins/good-slider/languages/good-slider.pot --exclude=\"build\" --domain=good-slider"
+        "i18n": "npm run i18n:pot && npm run i18n:php",
+        "i18n:pot": "wp-env run cli wp i18n make-pot wp-content/plugins/good-slider wp-content/plugins/good-slider/languages/good-slider.pot --exclude=\"build\" --domain=good-slider",
+        "i18n:php": "wp-env run cli wp i18n make-php wp-content/plugins/good-slider/languages"
     },
     "engines": {
         "node": ">=20.10.0",
