@@ -2,7 +2,7 @@
     "$schema": "https://playground.wordpress.net/blueprint-schema.json",
     "preferredVersions": {
         "php": "8.1",
-        "wp": "6.4"
+        "wp": "6.6"
     },
     "features": {
         "networking": true
