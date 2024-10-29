@@ -50,6 +50,8 @@ We recommend installing the plugin extension through the WordPress Backend.
 The UI currently allows for enabling/disabling navigation and pagination and the desktops default number of slides per view.
 
 You can use the `good-slider/swiper-options` filter hook to set the swiper configuration for a specific block instance.
+Have a look at the [examples on GitHub](https://github.com/goodwp/good-slider/tree/main/examples/filters.php).
+
 All the available arguments are documented in the [Swiper v8 documentation](https://v8.swiperjs.com/swiper-api).
 
 = Can I use my own enqueued Swiper script? =
